@@ -1,6 +1,7 @@
-/* Impressum und Datenschutz: gleiche Schrift, ruhige Lesespalte */
-.legal { max-width: 68ch; padding-top: clamp(20px, 3vw, 40px); padding-bottom: 64px; }
-.legal .back { display: inline-block; margin-bottom: 32px; font-size: 15px; }
-.legal h1 { margin: 0 0 24px; font-size: clamp(40px, 6vw, 72px); font-weight: 800; font-stretch: 62%; line-height: 0.95; }
-.legal h2 { margin: 32px 0 6px; font-size: 20px; font-weight: 700; font-stretch: 75%; }
-.legal p { margin: 0 0 12px; }
+/* Impressum und Datenschutz: gleiche kleine Typo wie Information */
+.legal { max-width: 640px; padding: 28px 12px 64px; font-size: 14px; line-height: 1.5; }
+.legal .back { display: inline-block; margin-bottom: 28px; color: #9b9da1; }
+.legal h1 { margin: 0 0 20px; font-size: 22px; font-weight: 600; }
+.legal h2 { margin: 26px 0 4px; font-size: 13px; font-weight: 600; }
+.legal p { margin: 0 0 10px; }
+.legal a { text-decoration: underline; text-underline-offset: 0.2em; }

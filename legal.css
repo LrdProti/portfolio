@@ -1,0 +1,6 @@
+/* Impressum und Datenschutz: gleiche Schrift, ruhige Lesespalte */
+.legal { max-width: 68ch; padding-top: clamp(20px, 3vw, 40px); padding-bottom: 64px; }
+.legal .back { display: inline-block; margin-bottom: 32px; font-size: 15px; }
+.legal h1 { margin: 0 0 24px; font-size: clamp(40px, 6vw, 72px); font-weight: 800; font-stretch: 62%; line-height: 0.95; }
+.legal h2 { margin: 32px 0 6px; font-size: 20px; font-weight: 700; font-stretch: 75%; }
+.legal p { margin: 0 0 12px; }

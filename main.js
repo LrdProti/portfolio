@@ -1,4 +1,4 @@
-// Startseite (eine Arbeit pro Bildschirm), Raster (Overview, Video, Imagery), Strichleiste und Player aus projects.js.
+// Startseite (eine Arbeit pro Bildschirm), Raster (Overview, Video, Imagery) und Player aus projects.js.
 // Stumme Loops laufen nur, solange sie sichtbar sind; ein Klick öffnet die Vollversion mit Ton und den Projekttext.
 (function () {
   var works = window.WORKS || [];
@@ -69,36 +69,6 @@
       });
     }, { rootMargin: "150px 0px" });
     loops.forEach(function (v) { io.observe(v); });
-  }
-
-  // Strichleiste mit Vorschau (nur Overview)
-  var ticks = document.getElementById("ticks");
-  var peek = document.getElementById("peek");
-  if (ticks && peek) {
-    var img = document.createElement("img"); img.alt = ""; peek.appendChild(img);
-    works.forEach(function (w) {
-      var a = el("a", "tick");
-      a.href = "#w-" + w.id;
-      a.setAttribute("aria-label", w.title);
-      function on() {
-        img.src = w.kind === "video" ? w.poster : w.full;
-        var r = a.getBoundingClientRect();
-        peek.style.left = Math.min(r.left, window.innerWidth - 132) + "px";
-        peek.style.top = (r.bottom + 6) + "px";
-        peek.classList.add("on");
-      }
-      function off() { peek.classList.remove("on"); }
-      a.addEventListener("mouseenter", on);
-      a.addEventListener("focus", on);
-      a.addEventListener("mouseleave", off);
-      a.addEventListener("blur", off);
-      a.addEventListener("click", function (e) {
-        e.preventDefault(); off();
-        var t = document.getElementById("w-" + w.id);
-        if (t) { t.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "center" }); t.focus({ preventScroll: true }); }
-      });
-      ticks.appendChild(a);
-    });
   }
 
   // Player mit Projekttext

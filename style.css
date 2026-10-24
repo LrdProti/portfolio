@@ -54,18 +54,6 @@ a:hover { text-decoration: underline; text-underline-offset: 0.2em; }
 .nav a { color: var(--quiet); }
 .nav a[aria-current="page"], .nav a:hover { color: var(--ink); text-decoration: none; }
 
-/* Strichleiste: ein Strich pro Arbeit, Vorschau beim Drüberfahren */
-.ticks { display: flex; flex-wrap: wrap; gap: 0; padding: 4px calc(var(--pad) - 3px) 0; }
-.tick { display: block; width: 9px; height: 18px; position: relative; }
-.tick::before { content: ""; position: absolute; left: 4px; top: 2px; bottom: 2px; width: 1px; background: var(--ink); }
-.tick:hover::before, .tick:focus-visible::before { width: 2px; left: 3.5px; background: var(--signal); }
-.peek {
-  position: fixed; z-index: 6; width: 120px; pointer-events: none;
-  background: var(--stage); opacity: 0; transition: opacity 0.12s;
-}
-.peek.on { opacity: 1; }
-.peek img { width: 100%; height: auto; }
-
 /* Raster */
 .grid {
   display: grid;
@@ -73,7 +61,7 @@ a:hover { text-decoration: underline; text-underline-offset: 0.2em; }
   column-gap: 12px;
   row-gap: 36px;
   align-items: end;
-  padding: 56px var(--pad) 0;
+  padding: 32px var(--pad) 0;
 }
 .item {
   display: block;
@@ -155,4 +143,3 @@ a:hover { text-decoration: underline; text-underline-offset: 0.2em; }
   .nav { gap: 12px; flex-wrap: wrap; }
   .info-lede { font-size: 16px; }
 }
-@media (prefers-reduced-motion: reduce) { .peek { transition: none; } }

@@ -1,61 +1,72 @@
-// Alle Arbeiten an einer Stelle. Reihenfolge = Reihenfolge im Raster (5 Spalten, Hoch- und Querformate gemischt).
-window.WORKS = [
-  { id: "white-studio", kind: "video", title: "White Studio", credit: "Self-initiated",
-    role: "Creative direction, AI video production", ratio: "16/9",
-    poster: "media/hero-film.jpg", loop: "media/hero-loop.mp4", full: "media/hero-film.mp4",
-    text: "A white, gallery-like studio lets the styling carry every frame: one model with everyday accessories, then sculptural looks, then three models in a composed tableau that breaks into movement." },
-  { id: "baizo-editorial-1", kind: "image", title: "BAIZO Editorial I", credit: "BAIZO",
-    role: "Art direction, AI image production", ratio: "9/16", full: "media/baizo-still-1.jpg",
-    alt: "Model in a green dress seated on a mint block with a leopard-print tote",
-    text: "Part of a three-image series: graphic studio sets and a warm tiled interior, each with a different product in focus." },
-  { id: "tropical", kind: "video", title: "Tropical Glamour", credit: "Self-initiated",
-    role: "Creative direction, video concept", ratio: "16/9",
-    poster: "media/tropical.jpg", loop: "media/tropical-loop.mp4", full: "media/tropical.mp4",
-    text: "One model moves through three moods: a sunlit tropical mural, a red mirrored room and an evening table, tied together by flash-lit portraits." },
-  { id: "floral-1", kind: "image", title: "Floral Beauty I", credit: "Self-initiated",
-    role: "Creative direction, AI image editing", ratio: "2/3", full: "media/floral-1.jpg",
-    alt: "Beauty portrait with a coral flower headpiece",
-    text: "Five portraits in which flowers become the styling: headpiece, collar, fringe and facial detail." },
-  { id: "baizo-teaser", kind: "video", title: "BAIZO Event Teaser", credit: "BAIZO",
-    role: "Creative direction, short-form video", ratio: "1078/1920",
-    poster: "media/baizo-teaser.jpg", loop: "media/baizo-teaser-loop.mp4", full: "media/baizo-teaser.mp4",
-    text: "A vertical teaser built around a slow-motion fall. The model loses her balance on a set of coral, mint and yellow forms, and the fall turns into the event invitation on a phone screen." },
+// Alle Arbeiten an einer Stelle. Reihenfolge = Reihenfolge auf Start und im Raster (5 Spalten, Hoch- und Querformate gemischt).
+// Projekttexte: Upwork-Lookbook-Fassungen (Titel, Rolle, Beschreibung).
+(function () {
+  var P = {
+    white: {
+      project: "Avant-Garde Fashion Film | White Studio Editorial",
+      role: "Creative Direction & Fashion Video Production",
+      text: "I built a fashion film around a white, gallery-like studio that lets the styling carry every frame. The sequence starts with a single model and everyday accessories, introduces increasingly sculptural looks, then gathers three models into a composed tableau before breaking into expressive movement. This progression gives each outfit space while building toward a memorable group image. Delivered as a high-resolution hero film for fashion and creative portfolios."
+    },
+    tropical: {
+      project: "Fashion Editorial Film | Tropical Glamour",
+      role: "Creative Direction & Video Concept Development",
+      text: "I developed a short fashion editorial that moves one model through three distinct moods: a sunlit tropical mural, a red mirrored room, and an intimate evening table. Flash-lit portraits, ornate surfaces, and close beauty details tie the locations together into one visual identity. The film shows how styling and setting can give a campaign range without losing its central character."
+    },
+    silencio: {
+      project: "SILENCIO | Cinematic Fashion Campaign Film",
+      role: "Creative Direction & Video Concept Development",
+      text: "I developed a 15-second fashion campaign concept that makes the name SILENCIO feel tangible. A woman leaves a shared apartment and steps onto a sunlit balcony above the sea; the shift in space and light creates a moment of quiet freedom. Restrained pacing keeps the focus on her and the SILENCIO sweatshirt, while the final title card gives the story a clear brand payoff. The result is a cinematic short suited to digital campaigns and social media."
+    },
+    teaser: {
+      project: "BAIZO | Fashion Event Teaser & Product Reveal",
+      role: "Creative Direction & Short-Form Video Production",
+      text: "I created a vertical event teaser built around a slow-motion fall. A model walks through a sculptural set of coral, mint, and yellow forms carrying BAIZO's zebra-pattern tote, then suddenly loses her balance. The fall becomes the visual hook: suspended movement and a burst of light carry the scene into a phone-screen invitation. The event details land as the payoff to a playful fashion sequence, giving the short video a clear reason to watch through to the end."
+    },
+    baizo: {
+      project: "BAIZO | Fashion Editorial Image Series",
+      role: "Art Direction & AI Image Production",
+      text: "I developed a three-image fashion editorial for BAIZO, moving from a warm tiled interior to clean studio compositions with colored geometric props. Denim, relaxed silhouettes, and animal-print totes give each image a different product focus, while consistent framing and color-matched BAIZO branding hold the series together. The set works as a flexible group of campaign and social visuals."
+    },
+    floral: {
+      project: "Floral Beauty Editorial | Five Surreal Portraits",
+      role: "Creative Direction & AI Image Production",
+      text: "I created a five-image beauty editorial in which flowers become part of the styling: a headpiece, sculptural collar, fringe, and delicate facial detail. The series moves between garden greens, deep burgundy terrain, and clear blue skies while preserving the same model and close portrait language. Natural skin texture anchors the surreal elements, creating a cohesive visual story with five distinct images."
+    },
+    v8: {
+      project: "V8 Engine Assembly | Industrial 3D Animation",
+      role: "Art Direction, 3D Animation & Post-Production",
+      text: "For a self-initiated LED-screen concept study, I turned a licensed V8 engine model into a cinematic assembly film. Exploded parts, macro views of moving components, polished metal, and red accents guide the viewer from mechanical detail to the completed engine. I rebuilt the materials, animation, lighting, and camera work to make a complex product readable at large scale. Base 3D model: \"engine exploded view\" by rondinellisophia (Sketchfab, CC BY)."
+    },
+    zebra: {
+      project: "Zebra in Motion | Widescreen LED Concept Film",
+      role: "Art Direction, AI Video & Post-Production",
+      text: "I developed a self-initiated wildlife concept for wide LED displays. The film opens so close to a zebra that its stripes become an abstract graphic pattern, then widens to reveal the animal moving through sunlit grass before returning to detail. This shift in scale gives the short piece a visual rhythm designed to hold attention on a large screen. AI video generation and post-production bring the sequence together as an event-content concept."
+    }
+  };
 
-  { id: "silencio", kind: "video", title: "SILENCIO", credit: "Campaign concept",
-    role: "Creative direction, video concept", ratio: "16/9",
-    poster: "media/silencio.jpg", loop: "media/silencio-loop.mp4", full: "media/silencio.mp4",
-    text: "A 15-second campaign concept: a woman leaves a shared apartment for a sunlit balcony above the sea. Restrained pacing keeps the focus on her and the sweatshirt." },
-  { id: "floral-2", kind: "image", title: "Floral Beauty II", credit: "Self-initiated",
-    role: "Creative direction, AI image editing", ratio: "2/3", full: "media/floral-2.jpg",
-    alt: "Beauty portrait with a sculptural pink flower collar",
-    text: "Five portraits in which flowers become the styling: headpiece, collar, fringe and facial detail." },
-  { id: "v8", kind: "video", title: "V8 Assembly", credit: "LED-wall concept",
-    role: "Art direction, 3D animation in Blender, post-production", ratio: "16/10",
-    poster: "media/v8-engine.jpg", loop: "media/v8-engine-loop.mp4", full: "media/v8-engine.mp4",
-    text: "Exploded parts and macro views of moving components lead to the finished engine. Base model “engine exploded view” by rondinellisophia, Sketchfab, CC BY." },
-  { id: "baizo-editorial-2", kind: "image", title: "BAIZO Editorial II", credit: "BAIZO",
-    role: "Art direction, AI image production", ratio: "9/16", full: "media/baizo-still-2.jpg",
-    alt: "Model on a coral bench with a zebra-print tote",
-    text: "Part of a three-image series: graphic studio sets and a warm tiled interior, each with a different product in focus." },
-  { id: "floral-3", kind: "image", title: "Floral Beauty III", credit: "Self-initiated",
-    role: "Creative direction, AI image editing", ratio: "2/3", full: "media/floral-3.jpg",
-    alt: "Beauty portrait with a red flower fringe and black lips",
-    text: "Five portraits in which flowers become the styling: headpiece, collar, fringe and facial detail." },
+  function w(id, kind, title, credit, key, ratio, files, alt) {
+    var p = P[key];
+    var o = { id: id, kind: kind, title: title, credit: credit, project: p.project, role: p.role, text: p.text, ratio: ratio, alt: alt || title };
+    if (kind === "video") { o.poster = files[0]; o.loop = files[1]; o.full = files[2]; } else { o.full = files[0]; }
+    return o;
+  }
 
-  { id: "zebra", kind: "video", title: "Zebra in Motion", credit: "LED-wall concept",
-    role: "Art direction, AI video, post-production", ratio: "1920/896",
-    poster: "media/zebra.jpg", loop: "media/zebra-loop.mp4", full: "media/zebra.mp4",
-    text: "So close that the stripes become a graphic pattern, then wide enough to show the animal walking through dry grass. Built for the scale of a wide LED screen." },
-  { id: "floral-4", kind: "image", title: "Floral Beauty IV", credit: "Self-initiated",
-    role: "Creative direction, AI image editing", ratio: "2/3", full: "media/floral-4.jpg",
-    alt: "Beauty portrait with a burgundy flower cap and a white flower at the lips",
-    text: "Five portraits in which flowers become the styling: headpiece, collar, fringe and facial detail." },
-  { id: "baizo-editorial-3", kind: "image", title: "BAIZO Editorial III", credit: "BAIZO",
-    role: "Art direction, AI image production", ratio: "9/16", full: "media/baizo-still-3.jpg",
-    alt: "Model in a patched denim jacket against yellow tiles",
-    text: "Part of a three-image series: graphic studio sets and a warm tiled interior, each with a different product in focus." },
-  { id: "floral-5", kind: "image", title: "Floral Beauty V", credit: "Self-initiated",
-    role: "Creative direction, AI image editing", ratio: "2/3", full: "media/floral-5.jpg",
-    alt: "Beauty portrait with blue graphic eyeliner against a blue sky",
-    text: "Five portraits in which flowers become the styling: headpiece, collar, fringe and facial detail." }
-];
+  window.WORKS = [
+    w("white-studio", "video", "White Studio", "Self-initiated", "white", "16/9", ["media/hero-film.jpg", "media/hero-loop.mp4", "media/hero-film.mp4"]),
+    w("baizo-editorial-1", "image", "BAIZO Editorial I", "BAIZO", "baizo", "9/16", ["media/baizo-still-1.jpg"], "Model in a green dress seated on a mint block with a leopard-print tote"),
+    w("tropical", "video", "Tropical Glamour", "Self-initiated", "tropical", "16/9", ["media/tropical.jpg", "media/tropical-loop.mp4", "media/tropical.mp4"]),
+    w("floral-1", "image", "Floral Beauty I", "Self-initiated", "floral", "2/3", ["media/floral-1.jpg"], "Beauty portrait with a coral flower headpiece"),
+    w("baizo-teaser", "video", "BAIZO Event Teaser", "BAIZO", "teaser", "1078/1920", ["media/baizo-teaser.jpg", "media/baizo-teaser-loop.mp4", "media/baizo-teaser.mp4"]),
+
+    w("silencio", "video", "SILENCIO", "Campaign concept", "silencio", "16/9", ["media/silencio.jpg", "media/silencio-loop.mp4", "media/silencio.mp4"]),
+    w("floral-2", "image", "Floral Beauty II", "Self-initiated", "floral", "2/3", ["media/floral-2.jpg"], "Beauty portrait with a sculptural pink flower collar"),
+    w("v8", "video", "V8 Engine Assembly", "LED-wall concept", "v8", "16/10", ["media/v8-engine.jpg", "media/v8-engine-loop.mp4", "media/v8-engine.mp4"]),
+    w("baizo-editorial-2", "image", "BAIZO Editorial II", "BAIZO", "baizo", "9/16", ["media/baizo-still-2.jpg"], "Model on a coral bench with a zebra-print tote"),
+    w("floral-3", "image", "Floral Beauty III", "Self-initiated", "floral", "2/3", ["media/floral-3.jpg"], "Beauty portrait with a red flower fringe and black lips"),
+
+    w("zebra", "video", "Zebra in Motion", "LED-wall concept", "zebra", "1920/896", ["media/zebra.jpg", "media/zebra-loop.mp4", "media/zebra.mp4"]),
+    w("floral-4", "image", "Floral Beauty IV", "Self-initiated", "floral", "2/3", ["media/floral-4.jpg"], "Beauty portrait with a burgundy flower cap and a white flower at the lips"),
+    w("baizo-editorial-3", "image", "BAIZO Editorial III", "BAIZO", "baizo", "9/16", ["media/baizo-still-3.jpg"], "Model in a patched denim jacket against yellow tiles"),
+    w("floral-5", "image", "Floral Beauty V", "Self-initiated", "floral", "2/3", ["media/floral-5.jpg"], "Beauty portrait with blue graphic eyeliner against a blue sky")
+  ];
+})();

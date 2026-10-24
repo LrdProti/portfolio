@@ -1,7 +1,7 @@
-// Raster, Strichleiste und Player aus projects.js. Stumme Loops laufen nur, solange sie sichtbar sind.
+// Startseite (eine Arbeit pro Bildschirm), Raster (Overview, Video, Imagery), Strichleiste und Player aus projects.js.
+// Stumme Loops laufen nur, solange sie sichtbar sind; ein Klick öffnet die Vollversion mit Ton und den Projekttext.
 (function () {
   var works = window.WORKS || [];
-  var grid = document.getElementById("grid");
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   function el(tag, cls, text) {
@@ -10,38 +10,50 @@
     if (text) n.textContent = text;
     return n;
   }
-  function thumb(w) { return w.kind === "video" ? w.poster : w.full; }
+  function ratioNum(r) { var p = r.split("/"); return Number(p[0]) / Number(p[1]); }
 
-  // Raster
+  function card(w, cls) {
+    var b = el("button", cls);
+    b.type = "button";
+    b.id = "w-" + w.id;
+    b.dataset.id = w.id;
+    if (ratioNum(w.ratio) < 1) b.classList.add("portrait");
+    b.setAttribute("aria-label", (w.kind === "video" ? "Play " : "Open ") + w.title + ", " + w.credit);
+    var m = el("span", "media");
+    m.style.aspectRatio = w.ratio;
+    m.style.setProperty("--r", ratioNum(w.ratio).toFixed(4));
+    if (w.kind === "video") {
+      var v = document.createElement("video");
+      v.muted = true; v.loop = true; v.playsInline = true; v.preload = "none";
+      v.poster = w.poster; v.dataset.src = w.loop;
+      v.setAttribute("aria-hidden", "true");
+      m.appendChild(v);
+    } else {
+      var i = document.createElement("img");
+      i.src = w.full; i.alt = w.alt; i.loading = "lazy"; i.decoding = "async";
+      m.appendChild(i);
+    }
+    var c = el("span", "cap");
+    c.appendChild(el("span", "t", w.title));
+    c.appendChild(el("span", "c", w.credit));
+    b.appendChild(m); b.appendChild(c);
+    return b;
+  }
+
+  // Startseite: eine Arbeit pro Bildschirm
+  var start = document.getElementById("start");
+  if (start) works.forEach(function (w) {
+    var s = el("div", "solo");
+    s.appendChild(card(w, "item item-solo"));
+    start.appendChild(s);
+  });
+
+  // Raster: alles, nur Filme oder nur Bilder
+  var grid = document.getElementById("grid");
   if (grid) {
     var show = grid.dataset.show;
-    works.filter(function (w) { return show !== "video" || w.kind === "video"; }).forEach(function (w) {
-      var b = el("button", "item");
-      b.type = "button";
-      b.id = "w-" + w.id;
-      b.dataset.id = w.id;
-      var rr = w.ratio.split("/");
-      if (Number(rr[0]) < Number(rr[1])) b.classList.add("portrait");
-      b.setAttribute("aria-label", (w.kind === "video" ? "Play " : "Open ") + w.title + ", " + w.credit);
-      var m = el("span", "media");
-      m.style.aspectRatio = w.ratio;
-      if (w.kind === "video") {
-        var v = document.createElement("video");
-        v.muted = true; v.loop = true; v.playsInline = true; v.preload = "none";
-        v.poster = w.poster; v.dataset.src = w.loop;
-        v.setAttribute("aria-hidden", "true");
-        m.appendChild(v);
-      } else {
-        var i = document.createElement("img");
-        i.src = w.full; i.alt = w.alt || w.title; i.loading = "lazy"; i.decoding = "async";
-        m.appendChild(i);
-      }
-      var c = el("span", "cap");
-      c.appendChild(el("span", "t", w.title));
-      c.appendChild(el("span", "c", w.credit));
-      b.appendChild(m); b.appendChild(c);
-      grid.appendChild(b);
-    });
+    works.filter(function (w) { return show === "all" || w.kind === show; })
+      .forEach(function (w) { grid.appendChild(card(w, "item")); });
   }
 
   // Loops
@@ -59,7 +71,7 @@
     loops.forEach(function (v) { io.observe(v); });
   }
 
-  // Strichleiste mit Vorschau
+  // Strichleiste mit Vorschau (nur Overview)
   var ticks = document.getElementById("ticks");
   var peek = document.getElementById("peek");
   if (ticks && peek) {
@@ -69,7 +81,7 @@
       a.href = "#w-" + w.id;
       a.setAttribute("aria-label", w.title);
       function on() {
-        img.src = thumb(w);
+        img.src = w.kind === "video" ? w.poster : w.full;
         var r = a.getBoundingClientRect();
         peek.style.left = Math.min(r.left, window.innerWidth - 132) + "px";
         peek.style.top = (r.bottom + 6) + "px";
@@ -89,7 +101,7 @@
     });
   }
 
-  // Player mit Credits
+  // Player mit Projekttext
   var dlg = document.querySelector(".viewer");
   if (!dlg) return;
   var stage = dlg.querySelector(".viewer-stage");
@@ -105,15 +117,12 @@
       stage.appendChild(v);
     } else {
       var i = document.createElement("img");
-      i.src = w.full; i.alt = w.alt || w.title;
+      i.src = w.full; i.alt = w.alt;
       stage.appendChild(i);
     }
-    var head = el("p"); head.style.margin = "0 0 6px";
-    head.appendChild(el("b", "", w.title));
-    head.appendChild(document.createTextNode(", " + w.credit + ". " + w.role + "."));
-    text.appendChild(head);
-    text.appendChild(el("p", "", w.text));
-    text.lastChild.style.margin = "0";
+    text.appendChild(el("p", "vt-title", w.project));
+    text.appendChild(el("p", "vt-role", w.role));
+    text.appendChild(el("p", "vt-text", w.text));
     dlg.showModal();
   }
   dlg.addEventListener("close", function () {
@@ -124,7 +133,7 @@
   });
   dlg.querySelector(".viewer-close").addEventListener("click", function () { dlg.close(); });
   dlg.addEventListener("click", function (e) { if (e.target === dlg) dlg.close(); });
-  if (grid) grid.addEventListener("click", function (e) {
+  document.addEventListener("click", function (e) {
     var b = e.target.closest(".item"); if (!b) return;
     var w = works.filter(function (x) { return x.id === b.dataset.id; })[0];
     if (w) open(w, b);

@@ -37,6 +37,11 @@
       role: "Art Direction, 3D Animation & Post-Production",
       text: "For a self-initiated LED-screen concept study, I turned a licensed V8 engine model into a cinematic assembly film. Exploded parts, macro views of moving components, polished metal, and red accents guide the viewer from mechanical detail to the completed engine. I rebuilt the materials, animation, lighting, and camera work to make a complex product readable at large scale. Base 3D model: \"engine exploded view\" by rondinellisophia (Sketchfab, CC BY)."
     },
+    nyc: {
+      project: "New York 1977 | AI Motion-Transfer Fashion Film",
+      role: "Creative Direction, AI Video & Post-Production",
+      text: "I recast a short dance clip with my own AI model and moved it into New York 1977. Motion transfer keeps every step and cut of the original, while a start frame sets the world: elevated train, brownstone stoops and yellow checker cabs, shot like a 16 mm home movie. Around her, a hydrant bursts, a payphone sparks and a cab flips through a fireball, yet she keeps dancing. Two slow-motion moments with white silhouette flashes mark the turns, so the outfit stays the hero of every frame."
+    },
     zebra: {
       project: "Zebra in Motion | Widescreen LED Concept Film",
       role: "Art Direction, AI Video & Post-Production",
@@ -64,6 +69,7 @@
     w("baizo-editorial-2", "image", "BAIZO Editorial II", "BAIZO", "baizo", "9/16", ["media/baizo-still-2.jpg"], "Model on a coral bench with a zebra-print tote"),
     w("floral-3", "image", "Floral Beauty III", "Self-initiated", "floral", "2/3", ["media/floral-3.jpg"], "Beauty portrait with a red flower fringe and black lips"),
 
+    w("nyc-1977", "video", "New York 1977", "Self-initiated", "nyc", "1280/954", ["media/nyc1977.jpg", "media/nyc1977-loop.mp4", "media/nyc1977.mp4"], "Model in a Fair Isle sweater dancing down a 1970s New York street while a yellow cab explodes behind her"),
     w("zebra", "video", "Zebra in Motion", "LED-wall concept", "zebra", "1920/896", ["media/zebra.jpg", "media/zebra-loop.mp4", "media/zebra.mp4"]),
     w("floral-4", "image", "Floral Beauty IV", "Self-initiated", "floral", "2/3", ["media/floral-4.jpg"], "Beauty portrait with a burgundy flower cap and a white flower at the lips"),
     w("baizo-editorial-3", "image", "BAIZO Editorial III", "BAIZO", "baizo", "9/16", ["media/baizo-still-3.jpg"], "Model in a patched denim jacket against yellow tiles"),

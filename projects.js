@@ -42,6 +42,11 @@
       role: "Creative Direction, AI Video & Post-Production",
       text: "I recast a short dance clip with my own AI model and moved it into New York 1977. Motion transfer keeps every step and cut of the original, while a start frame sets the world: elevated train, brownstone stoops and yellow checker cabs, shot like a 16 mm home movie. Around her, a hydrant bursts, a payphone sparks and a cab flips through a fireball, yet she keeps dancing. Two slow-motion moments with white silhouette flashes mark the turns, so the outfit stays the hero of every frame."
     },
+    dior: {
+      project: "Dior Pre-Fall | AI Fashion Edit",
+      role: "Creative Direction, AI Video & Post-Production",
+      text: "I built an independent AI fashion edit around a Dior Prêt-à-Porter look: a black ribbed cardigan with pearl buttons and washed straight-leg denim. Alpine meadows, a mossy forest and a boulder field give the look three settings. Flash masks, stacked silhouettes and double exposure punctuate the cut, while typography behind the model calls out the garment details. This is a self-initiated concept and has no affiliation with Dior."
+    },
     zebra: {
       project: "Zebra in Motion | Widescreen LED Concept Film",
       role: "Art Direction, AI Video & Post-Production",
@@ -70,6 +75,7 @@
     w("floral-3", "image", "Floral Beauty III", "Self-initiated", "floral", "2/3", ["media/floral-3.jpg"], "Beauty portrait with a red flower fringe and black lips"),
 
     w("nyc-1977", "video", "New York 1977", "Self-initiated", "nyc", "1280/954", ["media/nyc1977.jpg", "media/nyc1977-loop.mp4", "media/nyc1977.mp4"], "Model in a Fair Isle sweater dancing down a 1970s New York street while a yellow cab explodes behind her"),
+    w("dior-pre-fall", "video", "Dior Pre-Fall Fashion Edit", "Self-initiated", "dior", "4/3", ["media/dior-pre-fall.jpg", "media/dior-pre-fall-loop.mp4", "media/dior-pre-fall.mp4"], "Model in a black pearl-button cardigan and jeans stands in a rocky alpine landscape"),
     w("zebra", "video", "Zebra in Motion", "LED-wall concept", "zebra", "1920/896", ["media/zebra.jpg", "media/zebra-loop.mp4", "media/zebra.mp4"]),
     w("floral-4", "image", "Floral Beauty IV", "Self-initiated", "floral", "2/3", ["media/floral-4.jpg"], "Beauty portrait with a burgundy flower cap and a white flower at the lips"),
     w("baizo-editorial-3", "image", "BAIZO Editorial III", "BAIZO", "baizo", "9/16", ["media/baizo-still-3.jpg"], "Model in a patched denim jacket against yellow tiles"),

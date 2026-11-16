@@ -78,12 +78,13 @@
   var text = dlg.querySelector(".viewer-text");
   var opener = null;
 
-  function open(w, btn) {
+  function open(w, btn, fromLink) {
     opener = btn;
     stage.textContent = ""; text.textContent = "";
     if (w.kind === "video") {
       var v = document.createElement("video");
-      v.src = w.full; v.poster = w.poster; v.controls = true; v.autoplay = true; v.playsInline = true;
+      v.src = w.full; v.poster = w.poster; v.controls = true; v.autoplay = !fromLink || !reduce; v.playsInline = true;
+      if (fromLink) v.muted = true;
       stage.appendChild(v);
     } else {
       var i = document.createElement("img");
@@ -108,4 +109,15 @@
     var w = works.filter(function (x) { return x.id === b.dataset.id; })[0];
     if (w) open(w, b);
   });
+
+  function openLinkedWork() {
+    var b = document.getElementById(window.location.hash.slice(1));
+    if (!b || !b.classList.contains("item")) return;
+    var w = works.filter(function (x) { return x.id === b.dataset.id; })[0];
+    if (!w) return;
+    b.scrollIntoView({ block: "center" });
+    open(w, b, true);
+  }
+  openLinkedWork();
+  window.addEventListener("hashchange", openLinkedWork);
 })();

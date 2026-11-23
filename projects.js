@@ -47,6 +47,11 @@
       role: "Creative Direction, AI Video & Post-Production",
       text: "I recast a few short phone clips as a black-and-white portrait edit cut to the beat. Motion transfer replaces the original performer with a new AI character in a black studio, while the rhythm and the 25 shots of the footage carry over. On eight bass accents, offset ghost copies, prism stretches and white flashes split the image before it snaps back. Hands and face stay the focus of every frame. This is a self-initiated study, shown without sound."
     },
+    fat: {
+      project: "FAT Ice Race | Beat-Cut Event Edit",
+      role: "Creative Direction, Edit, 3D & AI Post-Production",
+      text: "I cut footage and photos from the FAT Ice Race into a 25-second square edit that builds like the race itself. Shots start at over a second and shrink to a quarter second, held together by directional-blur transitions and flashes on the kicks. Type sits behind the cars, the inflatable mascot flashes in event red, and a 3D FAT logo built in Blender spins into the final shot. Cutaways of the mascot dancing were generated with AI motion transfer. A VHS-style finish ties it together. Shown without sound."
+    },
   };
 
   function w(id, kind, title, credit, key, ratio, files, alt) {
@@ -64,15 +69,17 @@
     w("nyc-1977", "video", "New York 1977", "Self-initiated", "nyc", "1280/954", ["media/nyc1977.jpg", "media/nyc1977-loop.mp4", "media/nyc1977.mp4"], "Model in a Fair Isle sweater dancing down a 1970s New York street while a yellow cab explodes behind her"),
 
     w("dior-pre-fall", "video", "Dior Pre-Fall Fashion Edit", "Self-initiated", "dior", "4/3", ["media/dior-pre-fall.jpg", "media/dior-pre-fall-loop.mp4", "media/dior-pre-fall.mp4"], "Model in a black pearl-button cardigan and jeans stands in a rocky alpine landscape"),
+    w("fat-ice-race", "video", "FAT Ice Race Edit", "Self-initiated", "fat", "1/1", ["media/fat-ice-race.jpg", "media/fat-ice-race-loop.mp4", "media/fat-ice-race.mp4"], "Inflatable FAT mascot in a white suit and red helmet in front of a giant red FAT logo on a snowy ice race track"),
     w("floral-5", "image", "Floral Beauty V", "Self-initiated", "floral", "2/3", ["media/floral-5.jpg"], "Beauty portrait with blue graphic eyeliner against a blue sky"),
     w("silencio", "video", "SILENCIO", "Campaign concept", "silencio", "16/9", ["media/silencio.jpg", "media/silencio-loop.mp4", "media/silencio.mp4"]),
     w("floral-2", "image", "Floral Beauty II", "Self-initiated", "floral", "2/3", ["media/floral-2.jpg"], "Beauty portrait with a sculptural pink flower collar"),
-    w("baizo-editorial-2", "image", "BAIZO Editorial II", "BAIZO", "baizo", "9/16", ["media/baizo-still-2.jpg"], "Model on a coral bench with a zebra-print tote"),
 
+    w("baizo-editorial-2", "image", "BAIZO Editorial II", "BAIZO", "baizo", "9/16", ["media/baizo-still-2.jpg"], "Model on a coral bench with a zebra-print tote"),
     w("baizo-teaser", "video", "BAIZO Event Teaser", "BAIZO", "teaser", "1078/1920", ["media/baizo-teaser.jpg", "media/baizo-teaser-loop.mp4", "media/baizo-teaser.mp4"]),
     w("floral-4", "image", "Floral Beauty IV", "Self-initiated", "floral", "2/3", ["media/floral-4.jpg"], "Beauty portrait with a burgundy flower cap and a white flower at the lips"),
     w("baizo-editorial-3", "image", "BAIZO Editorial III", "BAIZO", "baizo", "9/16", ["media/baizo-still-3.jpg"], "Model in a patched denim jacket against yellow tiles"),
     w("floral-3", "image", "Floral Beauty III", "Self-initiated", "floral", "2/3", ["media/floral-3.jpg"], "Beauty portrait with a red flower fringe and black lips"),
+
     w("tropical", "video", "Tropical Glamour", "Self-initiated", "tropical", "16/9", ["media/tropical.jpg", "media/tropical-loop.mp4", "media/tropical.mp4"])
   ];
 })();

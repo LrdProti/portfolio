@@ -47,6 +47,11 @@
       role: "Creative Direction, AI Video & Post-Production",
       text: "I built an independent AI fashion edit around a Dior Prêt-à-Porter look: a black ribbed cardigan with pearl buttons and washed straight-leg denim. Alpine meadows, a mossy forest and a boulder field give the look three settings. Flash masks, stacked silhouettes and double exposure punctuate the cut, while typography behind the model calls out the garment details. This is a self-initiated concept and has no affiliation with Dior."
     },
+    feisty: {
+      project: "FEISTY | AI Beat-Cut Portrait Edit",
+      role: "Creative Direction, AI Video & Post-Production",
+      text: "I recast a few short phone clips as a black-and-white portrait edit cut to the beat. Motion transfer replaces the original performer with a new AI character in a black studio, while the rhythm and the 25 shots of the footage carry over. On eight bass accents, offset ghost copies, prism stretches and white flashes split the image before it snaps back. Hands and face stay the focus of every frame. This is a self-initiated study, shown without sound."
+    },
     zebra: {
       project: "Zebra in Motion | Widescreen LED Concept Film",
       role: "Art Direction, AI Video & Post-Production",
@@ -64,7 +69,7 @@
   window.WORKS = [
     w("white-studio", "video", "White Studio", "Self-initiated", "white", "16/9", ["media/hero-film.jpg", "media/hero-loop.mp4", "media/hero-film.mp4"]),
     w("baizo-editorial-1", "image", "BAIZO Editorial I", "BAIZO", "baizo", "9/16", ["media/baizo-still-1.jpg"], "Model in a green dress seated on a mint block with a leopard-print tote"),
-    w("tropical", "video", "Tropical Glamour", "Self-initiated", "tropical", "16/9", ["media/tropical.jpg", "media/tropical-loop.mp4", "media/tropical.mp4"]),
+    w("feisty", "video", "FEISTY B/W Edit", "Self-initiated", "feisty", "1080/1920", ["media/feisty-bw-edit.jpg", "media/feisty-bw-edit-loop.mp4", "media/feisty-bw-edit.mp4"], "Black-and-white portrait of a model with braided hair holding both hands at the chin in a dark studio"),
     w("floral-1", "image", "Floral Beauty I", "Self-initiated", "floral", "2/3", ["media/floral-1.jpg"], "Beauty portrait with a coral flower headpiece"),
     w("baizo-teaser", "video", "BAIZO Event Teaser", "BAIZO", "teaser", "1078/1920", ["media/baizo-teaser.jpg", "media/baizo-teaser-loop.mp4", "media/baizo-teaser.mp4"]),
 
@@ -79,6 +84,7 @@
     w("zebra", "video", "Zebra in Motion", "LED-wall concept", "zebra", "1920/896", ["media/zebra.jpg", "media/zebra-loop.mp4", "media/zebra.mp4"]),
     w("floral-4", "image", "Floral Beauty IV", "Self-initiated", "floral", "2/3", ["media/floral-4.jpg"], "Beauty portrait with a burgundy flower cap and a white flower at the lips"),
     w("baizo-editorial-3", "image", "BAIZO Editorial III", "BAIZO", "baizo", "9/16", ["media/baizo-still-3.jpg"], "Model in a patched denim jacket against yellow tiles"),
-    w("floral-5", "image", "Floral Beauty V", "Self-initiated", "floral", "2/3", ["media/floral-5.jpg"], "Beauty portrait with blue graphic eyeliner against a blue sky")
+    w("floral-5", "image", "Floral Beauty V", "Self-initiated", "floral", "2/3", ["media/floral-5.jpg"], "Beauty portrait with blue graphic eyeliner against a blue sky"),
+    w("tropical", "video", "Tropical Glamour", "Self-initiated", "tropical", "16/9", ["media/tropical.jpg", "media/tropical-loop.mp4", "media/tropical.mp4"])
   ];
 })();

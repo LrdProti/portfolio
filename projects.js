@@ -32,11 +32,6 @@
       role: "Creative Direction & AI Image Production",
       text: "I created a five-image beauty editorial in which flowers become part of the styling: a headpiece, sculptural collar, fringe, and delicate facial detail. The series moves between garden greens, deep burgundy terrain, and clear blue skies while preserving the same model and close portrait language. Natural skin texture anchors the surreal elements, creating a cohesive visual story with five distinct images."
     },
-    v8: {
-      project: "V8 Engine Assembly | Industrial 3D Animation",
-      role: "Art Direction, 3D Animation & Post-Production",
-      text: "For a self-initiated LED-screen concept study, I turned a licensed V8 engine model into a cinematic assembly film. Exploded parts, macro views of moving components, polished metal, and red accents guide the viewer from mechanical detail to the completed engine. I rebuilt the materials, animation, lighting, and camera work to make a complex product readable at large scale. Base 3D model: \"engine exploded view\" by rondinellisophia (Sketchfab, CC BY)."
-    },
     nyc: {
       project: "New York 1977 | AI Motion-Transfer Fashion Film",
       role: "Creative Direction, AI Video & Post-Production",
@@ -52,11 +47,6 @@
       role: "Creative Direction, AI Video & Post-Production",
       text: "I recast a few short phone clips as a black-and-white portrait edit cut to the beat. Motion transfer replaces the original performer with a new AI character in a black studio, while the rhythm and the 25 shots of the footage carry over. On eight bass accents, offset ghost copies, prism stretches and white flashes split the image before it snaps back. Hands and face stay the focus of every frame. This is a self-initiated study, shown without sound."
     },
-    zebra: {
-      project: "Zebra in Motion | Widescreen LED Concept Film",
-      role: "Art Direction, AI Video & Post-Production",
-      text: "I developed a self-initiated wildlife concept for wide LED displays. The film opens so close to a zebra that its stripes become an abstract graphic pattern, then widens to reveal the animal moving through sunlit grass before returning to detail. This shift in scale gives the short piece a visual rhythm designed to hold attention on a large screen. AI video generation and post-production bring the sequence together as an event-content concept."
-    }
   };
 
   function w(id, kind, title, credit, key, ratio, files, alt) {
@@ -71,20 +61,18 @@
     w("baizo-editorial-1", "image", "BAIZO Editorial I", "BAIZO", "baizo", "9/16", ["media/baizo-still-1.jpg"], "Model in a green dress seated on a mint block with a leopard-print tote"),
     w("feisty", "video", "FEISTY B/W Edit", "Self-initiated", "feisty", "1080/1920", ["media/feisty-bw-edit.jpg", "media/feisty-bw-edit-loop.mp4", "media/feisty-bw-edit.mp4"], "Black-and-white portrait of a model with braided hair holding both hands at the chin in a dark studio"),
     w("floral-1", "image", "Floral Beauty I", "Self-initiated", "floral", "2/3", ["media/floral-1.jpg"], "Beauty portrait with a coral flower headpiece"),
-    w("baizo-teaser", "video", "BAIZO Event Teaser", "BAIZO", "teaser", "1078/1920", ["media/baizo-teaser.jpg", "media/baizo-teaser-loop.mp4", "media/baizo-teaser.mp4"]),
+    w("nyc-1977", "video", "New York 1977", "Self-initiated", "nyc", "1280/954", ["media/nyc1977.jpg", "media/nyc1977-loop.mp4", "media/nyc1977.mp4"], "Model in a Fair Isle sweater dancing down a 1970s New York street while a yellow cab explodes behind her"),
 
+    w("dior-pre-fall", "video", "Dior Pre-Fall Fashion Edit", "Self-initiated", "dior", "4/3", ["media/dior-pre-fall.jpg", "media/dior-pre-fall-loop.mp4", "media/dior-pre-fall.mp4"], "Model in a black pearl-button cardigan and jeans stands in a rocky alpine landscape"),
+    w("floral-5", "image", "Floral Beauty V", "Self-initiated", "floral", "2/3", ["media/floral-5.jpg"], "Beauty portrait with blue graphic eyeliner against a blue sky"),
     w("silencio", "video", "SILENCIO", "Campaign concept", "silencio", "16/9", ["media/silencio.jpg", "media/silencio-loop.mp4", "media/silencio.mp4"]),
     w("floral-2", "image", "Floral Beauty II", "Self-initiated", "floral", "2/3", ["media/floral-2.jpg"], "Beauty portrait with a sculptural pink flower collar"),
-    w("v8", "video", "V8 Engine Assembly", "LED-wall concept", "v8", "16/10", ["media/v8-engine.jpg", "media/v8-engine-loop.mp4", "media/v8-engine.mp4"]),
     w("baizo-editorial-2", "image", "BAIZO Editorial II", "BAIZO", "baizo", "9/16", ["media/baizo-still-2.jpg"], "Model on a coral bench with a zebra-print tote"),
-    w("floral-3", "image", "Floral Beauty III", "Self-initiated", "floral", "2/3", ["media/floral-3.jpg"], "Beauty portrait with a red flower fringe and black lips"),
 
-    w("nyc-1977", "video", "New York 1977", "Self-initiated", "nyc", "1280/954", ["media/nyc1977.jpg", "media/nyc1977-loop.mp4", "media/nyc1977.mp4"], "Model in a Fair Isle sweater dancing down a 1970s New York street while a yellow cab explodes behind her"),
-    w("dior-pre-fall", "video", "Dior Pre-Fall Fashion Edit", "Self-initiated", "dior", "4/3", ["media/dior-pre-fall.jpg", "media/dior-pre-fall-loop.mp4", "media/dior-pre-fall.mp4"], "Model in a black pearl-button cardigan and jeans stands in a rocky alpine landscape"),
-    w("zebra", "video", "Zebra in Motion", "LED-wall concept", "zebra", "1920/896", ["media/zebra.jpg", "media/zebra-loop.mp4", "media/zebra.mp4"]),
+    w("baizo-teaser", "video", "BAIZO Event Teaser", "BAIZO", "teaser", "1078/1920", ["media/baizo-teaser.jpg", "media/baizo-teaser-loop.mp4", "media/baizo-teaser.mp4"]),
     w("floral-4", "image", "Floral Beauty IV", "Self-initiated", "floral", "2/3", ["media/floral-4.jpg"], "Beauty portrait with a burgundy flower cap and a white flower at the lips"),
     w("baizo-editorial-3", "image", "BAIZO Editorial III", "BAIZO", "baizo", "9/16", ["media/baizo-still-3.jpg"], "Model in a patched denim jacket against yellow tiles"),
-    w("floral-5", "image", "Floral Beauty V", "Self-initiated", "floral", "2/3", ["media/floral-5.jpg"], "Beauty portrait with blue graphic eyeliner against a blue sky"),
+    w("floral-3", "image", "Floral Beauty III", "Self-initiated", "floral", "2/3", ["media/floral-3.jpg"], "Beauty portrait with a red flower fringe and black lips"),
     w("tropical", "video", "Tropical Glamour", "Self-initiated", "tropical", "16/9", ["media/tropical.jpg", "media/tropical-loop.mp4", "media/tropical.mp4"])
   ];
 })();
